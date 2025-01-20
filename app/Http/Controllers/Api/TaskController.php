@@ -49,8 +49,6 @@ class TaskController extends Controller
 
     public function update(Request $request, Task $task)
     {
-        $this->authorize('update', $task);
-
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
@@ -64,7 +62,6 @@ class TaskController extends Controller
 
     public function destroy(Task $task)
     {
-        $this->authorize('delete', $task);
         $task->delete();
         return response()->json(['success' => true]);
     }
