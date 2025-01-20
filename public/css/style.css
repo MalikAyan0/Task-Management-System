@@ -1,0 +1,80 @@
+
+.background {
+    
+        background: linear-gradient(45deg, #212121, #9b111e); 
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        width: 100%;
+        max-width: 1000px;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .register-box {
+        background-color: rgba(0, 0, 0, 0.8); 
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .register-box:hover {
+        transform: translateY(-10px); 
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+    .text-white {
+        color: #fff;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .form-floating input {
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 15px;
+        border: 1px solid #444;
+        background-color: #333;
+        color: #fff;
+    }
+    .form-floating label {
+        color: #bbb;
+    }
+    .text-red {
+        color: #9b111e;
+        text-decoration: none;
+    }
+    .text-red:hover {
+        text-decoration: underline;
+    }
+    .btn-light {
+        background-color: #9b111e;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    .btn-light:hover {
+        background-color: #d32f2f;
+    }
+    .btn-light.wow {
+        animation-duration: 1s;
+    }
+    .invalid-feedback {
+        color: #f44336;
+        font-size: 0.875rem;
+    }
+    @media (max-width: 768px) {
+        .col-lg-6 {
+            max-width: 100%;
+        }
+        .register-box {
+            padding: 30px;
+        }
+    }
