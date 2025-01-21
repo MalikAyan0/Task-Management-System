@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+     public function __construct()
+     {
+         $this->middleware('auth');
+     }
 
     public function getTasks()
     {
@@ -31,7 +31,6 @@ class TaskController extends Controller
         ]);
 
         $user = Auth::check();
-        dd($user);
         $taskOwnerId =  $user->id;
 
         $task = Task::create([
@@ -44,8 +43,6 @@ class TaskController extends Controller
 
         return response()->json(['success' => true, 'task' => $task]);
     }
-
-
 
     public function update(Request $request, Task $task)
     {
